@@ -17,6 +17,12 @@ Es útil cuando los objetos concretos que se crean o se van a crear se desconoce
 
 #### Abstract Factory
 #### Singleton
+Su objetivo es que solo exista una instancia de una clase especifica y que tenga un acceso global desde el resto de la aplicación. En este sentido es útil cuando queremos o necesitamos cumplir con esas dos condiciones.
+Para que un patrón de diseño sea declarado singleton deberá cumplir con las condicines anteriores, de lo contrario no lo será. En este es útil aclarar que existe una controversia respecto a si es necesario usar singletons y si uso es una buena practica, ya que la creacion de estos trae desventajas como vulnerar los principios SOLID, problemas para ser testeado, etc. 
+##### Se crea de la siguiente forma :
+- Crear la case que queremos que cumpla con tales caracteristicas.
+- Volver privado su método constructo para que no puede ser instanciada desde fuera de si misma
+- Crear un metodo estático que sea el encargado de crear la unica instancia que tendrá la clase, su lógica deberá crear una instancia si no ha sido creada y de lo contrario devolver la instancia ya creada.
 
 ## Patrones comportamentales
 #### Strategy
